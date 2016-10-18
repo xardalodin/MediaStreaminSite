@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="kuroneko.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Kuroneko.se</title>
+      <link rel="stylesheet" type="text/css" href="~/Styles/StyleSheet.css"/>   
+</head>
+<body>
+    <form id="KuronekoMaster" runat="server">
+        <div id ="wrapper">
+                <div id="banner">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Image/stick2.png"  Height="200px" Width="100%" />
+
+                </div>
+                <div id="navigation">
+                     <ul id ="nav">
+
+                        <li><a href="~/Pages/Account/Login.aspx" runat="server">Home</a></li>
+                        <li><a href="#" runat="server">About</a></li>
+                        <li><a href="#" runat="server">Questions</a></li>
+                        <li><a href="~/Pages/Managment/Movie_add.aspx" runat="server">Managment</a></li>       
+                    </ul>
+                    <div id="Login" style="float:right; padding-right: 15px;">
+
+                        <asp:Label ID="lblLogin" runat="server" ForeColor="black" Visible="False"></asp:Label>
+                        <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="black"  CausesValidation="False" OnClick="LinkButton1_Click">LinkButton</asp:LinkButton>
+           
+                    </div>
+                </div>
+                <div id="content_area">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="footer">
+                    <p>All rights reserved</p>
+                </div>
+
+       </div>    
+    </form>
+</body>
+</html>
